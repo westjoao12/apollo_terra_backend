@@ -7,6 +7,11 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({origin: '*'}));
 app.use(express.json());
 
+// Rotas
+const nasaApiRoutes = require('./src/routes/nasagibs.routes');
+
+app.use(nasaApiRoutes);
+
 app.get('/api', (req, res)=> {
     res.send('API funcionando!');
 });
