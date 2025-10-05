@@ -12,8 +12,8 @@ const nasaApiRoutes = require('./src/routes/nasagibs.routes');
 
 app.use(nasaApiRoutes);
 
-app.get('/api', (req, res)=> {
-    res.send('API funcionando!');
+app.get('/', (req, res)=> {
+    res.send('Seja Bem Vindo a API da Apollo Terra!');
 });
 
 module.exports= app;
